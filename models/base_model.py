@@ -9,7 +9,7 @@ from models import storage
 class BaseModel:
     """All other classes will derive from this class"""
 
-    def __init__(self, *args, **wargs):
+    def __init__(self, *args, **kwargs):
         """This method initializes instance attributes.
 
         Parameters:
