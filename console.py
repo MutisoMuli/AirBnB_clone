@@ -83,7 +83,7 @@ class HBNBCommand(cmd.Cmd):
         """Don't do anything on Entry"""
         pass
     
-    def do_generate(self, line):
+    def do_create(self, line):
         """Create an instance"""
         if line == "" or line is None:
             print("** class name missing **")
@@ -94,7 +94,7 @@ class HBNBCommand(cmd.Cmd):
             b.save()
             print(b.id)
             
-    def do_display(self, line):
+    def do_show(self, line):
         """Prints the str presentation of an instance"""
         if line == "" or line is None:
             print("** class name missing **")
@@ -111,7 +111,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print(storage.all()[key])
                 
-    def do_terminate(self, line):
+    def do_destroy(self, line):
         """Deletes an instance based on the class name and id"""
         if line == "" or line is None:
             print("** class name missing **")
@@ -129,7 +129,7 @@ class HBNBCommand(cmd.Cmd):
                     del storage.all()[key]
                     storage.save()
                     
-    def do_complete(self, line):
+    def do_all(self, line):
         """Print string representation for all instances"""
         if line != "":
             words = line.split(' ')
@@ -143,7 +143,7 @@ class HBNBCommand(cmd.Cmd):
             new_list = [str(obj) for key, obj in storage.all().items()]
             print(new_list)
             
-    def do_calculate(self, line):
+    def do_count(self, line):
         """Count instances for a class"""
         words = line.split(' ')
         if not words[0]:
@@ -156,7 +156,7 @@ class HBNBCommand(cmd.Cmd):
                     words[0] + '.')]
             print(len(matches))
             
-    def do_upgrade(self, line):
+    def do_update(self, line):
         """Update an instance by update or add an attribute"""
         if line == "" or line is None:
             print("** class name missing **")
