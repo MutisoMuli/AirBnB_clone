@@ -10,13 +10,13 @@ import json
 
 class HBNBCommand(cmd.Cmd):
     """Class for command interpreter"""
-    
+
     prompt = "(hbnb)"
-    
+
     def handle_default(self, line):
         """Command if nothing else matches"""
         self._precmd(line)
-        
+
     def _precmd(self, line):
         """Intercepts commands to test for syntax"""
         match = re.search(r"^(\w*)\.(\w+)(?:\(([^)]*)\))$", line)
@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             uid = args
             attr_or_dict = False
-            
+
         attr_and_value = ""
         if method == "update" and attr_or_dict:
             match_dict = re.search('^({.*})$', attr_or_dict)
@@ -47,7 +47,7 @@ class HBNBCommand(cmd.Cmd):
         command = method + " " + classname + " " + uid + " " + attr_and_value
         self.onecmd(command)
         return command
-    
+
     def modify_dict(self, classname, uid, s_dict):
         """Method helper for update() with dictionary"""
         s = s_dict.replace("'", '"')
@@ -70,20 +70,24 @@ class HBNBCommand(cmd.Cmd):
                     setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
 
-    def do_EOF(self, line):   
+    def do_EOF(self, line):
         """Handles End Of File character"""
         print()
         return True
-    
+
     def do_exit(self, line):
         """Exit the program"""
         return True
-    
+
     def handle_emptyline(self):
         """Don't do anything on Entry"""
         pass
+
     
     def do_create(self, line):
+
+    def do_generate(self, line):
+
         """Create an instance"""
         if line == "" or line is None:
             print("** class name missing **")
@@ -93,8 +97,12 @@ class HBNBCommand(cmd.Cmd):
             b = storage.classes()[line]()
             b.save()
             print(b.id)
+
             
     def do_show(self, line):
+
+    def do_display(self, line):
+
         """Prints the str presentation of an instance"""
         if line == "" or line is None:
             print("** class name missing **")
@@ -110,8 +118,12 @@ class HBNBCommand(cmd.Cmd):
                     print("** no instance found **")
                 else:
                     print(storage.all()[key])
+
                 
     def do_destroy(self, line):
+
+    def do_terminate(self, line):
+
         """Deletes an instance based on the class name and id"""
         if line == "" or line is None:
             print("** class name missing **")
@@ -130,6 +142,8 @@ class HBNBCommand(cmd.Cmd):
                     storage.save()
                     
     def do_all(self, line):
+
+    def do_complete(self, line):
         """Print string representation for all instances"""
         if line != "":
             words = line.split(' ')
@@ -144,6 +158,8 @@ class HBNBCommand(cmd.Cmd):
             print(new_list)
             
     def do_count(self, line):
+
+    def do_calculate(self, line):
         """Count instances for a class"""
         words = line.split(' ')
         if not words[0]:
@@ -157,11 +173,13 @@ class HBNBCommand(cmd.Cmd):
             print(len(matches))
             
     def do_update(self, line):
+
+    def do_upgrade(self, line):
         """Update an instance by update or add an attribute"""
         if line == "" or line is None:
             print("** class name missing **")
             return
-        
+
         rex = r'^(\S+)(?:\s(\S+)(?:\s(\S+)(?:\s((?:"[^"]*")|(?:(\S)+)))?)?)?'
         match = re.search(rex, line)
         classname = match.group(1)
@@ -175,7 +193,7 @@ class HBNBCommand(cmd.Cmd):
         elif uid is None:
             print("** instance id missing **")
         else:
-            key = "{}.{}".format(classname,uid)
+            key = "{}.{}".format(classname, uid)
             if key not in storage.all():
                 print("** no instance found **")
             elif not attribute:
@@ -201,7 +219,7 @@ class HBNBCommand(cmd.Cmd):
                         pass
                 setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
-                
-                
+
+
 if __name__ == '__main__':
-    HBNBCommand().cmdloop()                    
+    HBNBCommand().cmdloop()
