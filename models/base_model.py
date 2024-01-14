@@ -35,8 +35,12 @@ class BaseModel:
 
     def __str__(self):
         """Provides the official string representation."""
+        return "[{}] ({}) {}".\
+            format(type(self).__name__, self.id, self.__dict__)
 
-        self.updated_at = datetime.now()
+    def save(self):
+        """public instance attribute updated_at"""
+	self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):

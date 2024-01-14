@@ -13,7 +13,7 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb)"
 
-    def handle_default(self, line):
+    def default(self, line):
         """Command if nothing else matches"""
         self._precmd(line)
 
@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
         if method == "update" and attr_or_dict:
             match_dict = re.search('^({.*})$', attr_or_dict)
             if match_dict:
-                self.modify_dict(classname, uid, match_dict.group(1))
+                self.update_dict(classname, uid, match_dict.group(1))
                 return ""
             match_attr_and_value = re.search(
                 '^(?:"([^"]*)")?(?:, (.*))?$', attr_or_dict)
@@ -48,7 +48,7 @@ class HBNBCommand(cmd.Cmd):
         self.onecmd(command)
         return command
 
-    def modify_dict(self, classname, uid, s_dict):
+    def update_dict(self, classname, uid, s_dict):
         """Method helper for update() with dictionary"""
         s = s_dict.replace("'", '"')
         d = json.loads(s)
@@ -75,11 +75,11 @@ class HBNBCommand(cmd.Cmd):
         print()
         return True
 
-    def do_exit(self, line):
+    def do_quit(self, line):
         """Exit the program"""
         return True
 
-    def handle_emptyline(self):
+    def emptyline(self):
         """Don't do anything on Entry"""
         pass
 
