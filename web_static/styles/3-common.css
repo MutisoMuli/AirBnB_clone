@@ -14,12 +14,14 @@ header, footer {
 }
 
 header {
+    background-color: #484848;
+    color: white;
     height: 70px;
+    width: 100%;
     border-bottom: 1px solid #CCCCCC;
     display: flex;
     align-items: center;
     padding-left: 20px;
-    background-color: #484848;
 }
 
 .logo {
@@ -27,14 +29,16 @@ header {
 }
 
 footer {
+    background-color: #484848;
+    color: white;
     height: 60px;
+    width: 100%;
     border-top: 1px solid #CCCCCC;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #484848;
-    color: white;
-    margin-top: auto;
+    position: fixed;
+    bottom: 0;
 }
 
