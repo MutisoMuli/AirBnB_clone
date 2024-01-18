@@ -1,7 +1,40 @@
-body{
+html, body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0;
     padding: 0;
     color: #484848;
     front-size: 14px;
     front-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+header, footer {
+    width: 100%;
+}
+
+header {
+    height: 70px;
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #484848;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+footer {
+    height: 60px;
+    border-top: 1px solid #CCCCCC;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #484848;
+    color: white;
+    margin-top: auto;
+}
+
