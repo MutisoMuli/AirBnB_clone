@@ -20,7 +20,7 @@ button{
     top: 10px;
 }
 
-button :hover{
+button:hover{
     opacity: 0.9;
 }
 
@@ -64,7 +64,7 @@ button :hover{
 .popover ul, .popover li{
     line-height: 160%;
 }
-.amenities:popover{
+.amenities .popover{
     padding-top: 20px;
     height: 150%;
 }
