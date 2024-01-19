@@ -24,7 +24,7 @@ button:hover{
     opacity: 0.9;
 }
 
-.filters div{
+.filters .filter-item{
     float: left;
     position: relative;
     height: 100%;
@@ -57,6 +57,7 @@ button:hover{
     position: absolute;
     left: 0;
     top: 100%;
+    z-index: 1;
 }
 .filters .filter-item:hover .popover{
     visibility: visible;
