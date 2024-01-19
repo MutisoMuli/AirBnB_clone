@@ -28,12 +28,9 @@ button:hover{
     float: left;
     position: relative;
     height: 100%;
-    width: 25%;
+    width: calc(40% - 4%);
     margin-left: 4%;
     line-height: 6px;
-}
-
-.location{
     border-right: 1px solid #DDDDDD;
 }
 
@@ -43,6 +40,7 @@ button:hover{
 .filters h4{
     font-weight: 400;
     font-size: 14px;
+    margin: 0;
 }
 
 .popover {
@@ -53,11 +51,14 @@ button:hover{
     visibility: hidden;
     line-height: normal;
     margin-top: 22px;
-    margin-left: -41px;
+    padding: 10px;
     height: 200px;
     list-style-type: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
 }
-.location:hover .popover, .amenities:hover .popover{
+.filters .filter-item:hover .popover{
     visibility: visible;
 }
 
