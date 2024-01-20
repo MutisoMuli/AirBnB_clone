@@ -23,6 +23,7 @@ button {
 button:hover {
     opacity: 0.9;
 }
+
 .filters div {
     display: inline-block;
     position: relative;
@@ -32,7 +33,7 @@ button:hover {
     line-height: 6px;
 }
 
-.locations {
+.locations, .amenities {
     border-right: 1px solid #DDDDDD;
 }
 
@@ -48,7 +49,8 @@ button:hover {
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    top: 0%;
+    top: 0;
+    left: 0;
 }
 
 .filters:hover .popover {
@@ -72,4 +74,3 @@ button:hover {
 .popover h2 {
     font-size: 16px;
 }
-
