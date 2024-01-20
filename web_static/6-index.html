@@ -14,42 +14,49 @@
             <div class="logo"><img src="images/logo.png" alt="logo"> </div>
         </header>
 
-        <section class="container">
-            <button> Filter 1 </button>
-            <button> Filter 2 </button>
-
-            <div class="filter" id="locations-filter">
-                <h3> Locations </h3>
-                <div class="popover">
-                    <ul>
-                        <li>
-                            <h2> State 1 </h2>
-                            <ul>
-                                <li> City 1 </li>
-                                <li> City 2 </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h2> State 2 </h2>
-                            <ul>
-                                <li> City 3 </li>
-                                <li> City 4 </li>
-                            </ul>
-                        </li>
-                    </ul>
+        <div class="container">
+            <section class="filter">
+                <button> Search </button>
+                <div class="locations-filter">
+                    <h3> States </h3>
+                    <h4> New York, Colorado... </h4>
                 </div>
-            </div>
-
-            <div class="filter" id="amenities-filter">
-                <h3> Amenities </h3>
-                <div class="popover">
-                    <ul>
-                        <li> Fake Item 1 </li>
-                        <li> Fake Item 2 </li>
-                    </ul>
+                <div class="amenities-filter">
+                    <h3> Amenities </h3>
+                    <h4> Air Conditioning, Kitchen... </h4>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section class="popover" id="locations-filter">
+                <h2> locations </h2>
+                <ul>
+                    <li>
+                        <h3> Arizona: </h3>
+                        <ul>
+                            <li> Page </li>
+                            <li> Page2 </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3> California: </h3>
+                        <ul>
+                            <li> San Francisco </li>
+                            <li> Los Altos </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="popover" id="amenities-filter">
+                <h2> Amenities </h2>
+                <ul>
+                    <li> Internet </li>
+                    <li> Tv </li>
+                    <li> Kitchen </li>
+                    <li> Iron </li>
+                </ul>
+            </section>
+        </div>
 
         <footer>
             <p> Best School </p>
