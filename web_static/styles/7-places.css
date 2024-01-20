@@ -14,7 +14,7 @@ article {
     box-sizing: border-box;
 }
 
-.places airticle:nth-child(3) {
+.places article:nth-child(3) {
     width: 100%;
     margin: 0 auto;
 }
@@ -24,6 +24,6 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
 }
