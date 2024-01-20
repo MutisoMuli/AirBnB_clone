@@ -35,11 +35,27 @@ button:hover {
 
 .locations, .amenities {
     border-right: 1px solid #DDDDDD;
+    position: relative;
 }
 
 .filters h3 {
     font-weight: 400;
     font-size: 14px;
+}
+
+.filters h4 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    z-index: 2;
+}
+.locations:hover h4, .amenities:hover h4 {
+    display: block;
 }
 
 .popover {
