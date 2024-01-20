@@ -25,7 +25,7 @@ button:hover {
 }
 
 .filters div {
-    display: inline-block;
+    float: left;
     position: relative;
     height: 100%;
     width: 25%;
@@ -33,61 +33,40 @@ button:hover {
     line-height: 6px;
 }
 
-.locations, .amenities {
+.locations{
     border-right: 1px solid #DDDDDD;
-    position: relative;
 }
 
 .filters h3 {
+    font-weight: 600;
+}
+
+.filters h4 {
     font-weight: 400;
     font-size: 14px;
 }
 
-.filters h4 {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    background-color: #FAFAFA;
-    border: 1px solid #DDDDDD;
-    border-radius: 4px;
-    z-index: 2;
-}
-.locations:hover h4, .amenities:hover h4 {
-    display: block;
-}
-
 .popover {
-    display: none;
-    position: absolute;
     background-color: #FAFAFA;
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    top: 100%;
-    left: 0;
-    z-index: 1;
+    visibility: hidden;
+    line-height: normal;
+    margin-top: 22px;
+    margin-left: -42px;
+    height: 200px;
+    list-style-type: none;
 }
 
-.filters:hover .popover {
-    display: block;
+.location:hover.popover, .amenities:hover .popover{
+    visibility: visible;
 }
 
-.popover ul {
-    list-style: none;
-    padding: 0;
+.popover ul, .popover li{
+    line-height: 160%;
 }
-
-.popover ul li {
-    padding: 8px;
-    cursor: pointer;
-}
-
-.popover ul li:hover {
-    background-color: #EAEAEA;
-}
-
-.popover h2 {
-    font-size: 16px;
+.amenities .popover{
+    padding-top: 20px;
+    height: 150%;
 }
