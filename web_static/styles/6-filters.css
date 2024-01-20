@@ -14,6 +14,7 @@
 
 .filter:hover .popover {
     display: block;
+    z-index: 1;
 }
 
 .popover ul {
