@@ -1,14 +1,9 @@
-html, body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+body {
     margin: 0;
     padding: 0;
-    color: #484848;
-    font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #484848;
 }
 
-header, footer {
-    width: 100%;
-}
+link rel="icon" href="icon.png" type="images/png" sizes="16x16"
