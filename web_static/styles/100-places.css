@@ -92,14 +92,22 @@
 }
 
 .amenities li {
+<<<<<<< HEAD
     padding-left: 20px; /* Adjust as required for spacing between icon and text */
+=======
+    padding-left: 20px; /* Adjust as needed for spacing between icon and text */
+>>>>>>> 96f37f4bfc50b8ba8925057cc09bc0d7bc47a0b6
     position: relative;
     font-size: 14px;
     line-height: 1.5;
 }
 
 .amenities li::before {
+<<<<<<< HEAD
     content: '\2022'; /* Bullet point chars */
+=======
+    content: '\2022'; /* Bullet point character */
+>>>>>>> 96f37f4bfc50b8ba8925057cc09bc0d7bc47a0b6
     position: absolute;
     left: 0;
     color: #333; /* Adjust color as needed */
@@ -120,7 +128,11 @@
 }
 
 .reviews li {
+<<<<<<< HEAD
     margin-bottom: 20px; /* Adjust as required for spacing between reviews */
+=======
+    margin-bottom: 20px; /* Adjust as needed for spacing between reviews */
+>>>>>>> 96f37f4bfc50b8ba8925057cc09bc0d7bc47a0b6
 }
 
 .reviews h3 {
@@ -129,5 +141,10 @@
 
 .reviews p {
     font-size: 12px;
+<<<<<<< HEAD
     color: #555; /* Adjust color as required */
 }
+=======
+    color: #555; /* Adjust color as needed */
+}
+>>>>>>> 96f37f4bfc50b8ba8925057cc09bc0d7bc47a0b6
