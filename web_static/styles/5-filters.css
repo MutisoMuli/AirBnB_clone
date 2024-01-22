@@ -41,12 +41,15 @@
 .amenities {
     height: 100%;
     width: 25%;
-    border-right: 1px solid #DDDDDD;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 15px;
+}
+
+.locations {
+    border-right: 1px solid #DDDDDD;
+    padding-right: 20px;
 }
 
 .locations h3,
