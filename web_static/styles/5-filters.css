@@ -45,14 +45,7 @@
     width: 25%;
 }
 
-.locations,
-.amenities {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.locations:first-child {
+.locations:not(:last-child) {
     border-right: 1px solid #DDDDDD;
 }
 
