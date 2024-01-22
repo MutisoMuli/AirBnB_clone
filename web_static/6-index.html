@@ -3,62 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png" type="image/png" sizes="16x16">
         <link rel="stylesheet" href="styles/4-common.css">
         <link rel="stylesheet" href="styles/3-header.css">
         <link rel="stylesheet" href="styles/3-footer.css">
-        <link rel="stylesheet" href="styles/6-filters.css">
-        <title> AirBnB Clone </title>
+        <link rel="stylesheet" href="styles/4-filters.css">
+        <title>AirBnB Clone</title>
     </head>
     <body>
         <header>
-            <div class="logo"><img src="images/logo.png" alt="logo"> </div>
+            <div class="logo"><img src="images/logo.png" alt="logo"></div>
         </header>
+
         <div class="container">
             <section class="filters">
-                <button> Search </button>
-                <div class="locations">
-                    <h3> States </h3>
-                    <h4> New York, Colorado... </h4>
+                <div class="locations" id="location-filter">
+                    <h3>States</h3>
+                    <h4>Califonia, Arizona...</h4>
+                    <ul class="popover">
+                        <li>
+                            <h2>Califonia</h2>
+                            <ul>
+                                <li>San Francisco</li>
+                                <li>Los Altos</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>Arizona</h2>
+                            <ul>
+                                <li>Page</li>
+                                <li>Page2</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <div class="amenities">
-                    <h3> Amenities </h3>
-                    <h4> Air Conditioning, Kitchen... </h4>
+                <div class="amenities" id="amenities-filter">
+                    <h3>Amenities</h3>
+                    <h4>Internet, Kitchen...</h4>
+                    <ul class="popover">
+                        <li>Internet</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>Iron</li>
+                    </ul>
                 </div>
-            </section>
-
-            <section class="popover" id="locations">
-                <h2> locations </h2>
-                <ul>
-                    <li>
-                        <h3> Arizona: </h3>
-                        <ul>
-                            <li> Page </li>
-                            <li> Page2 </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3> California: </h3>
-                        <ul>
-                            <li> San Francisco </li>
-                            <li> Los Altos </li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="popover" id="amenities">
-                <h2> Amenities </h2>
-                <ul>
-                    <li> Internet </li>
-                    <li> Tv </li>
-                    <li> Kitchen </li>
-                    <li> Iron </li>
-                </ul>
+                <button class="search-button">Search</button>
             </section>
         </div>
-
         <footer>
-            <p> Best School </p>
+            <p>Best School</p>
         </footer>
     </body>
 </html>
