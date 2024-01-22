@@ -68,3 +68,11 @@
     font-size: 14px;
     margin-top: 5px;
 }
+
+.locations h3,
+.amenities h3,
+.locations h4,
+.amenities h4,
+.search-button {
+    margin-top: 5px;
+}
