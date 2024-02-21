@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Has the FileStorage class
+Contains the FileStorage class
 """
 
 import json
@@ -17,7 +17,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class FileStorage:
-    """serializes instances to a JSON file & deserializes them back"""
+    """serializes instances to a JSON file & deserializes back to instances"""
 
     __file_path = "file.json"
     __objects = {}
@@ -34,13 +34,13 @@ class FileStorage:
                     if v.__class__ == cls}
 
     def new(self, obj):
-        """puts in __objects the obj with key <obj class name>.id"""
+        """sets in __objects the obj with key <obj class name>.id"""
         if obj is not None:
             key = obj.__class__.__name__ + "." + obj.id
             self.__objects[key] = obj
 
     def save(self):
-        """serializes __objects to the JSON file using (path: __file_path)"""
+        """serializes __objects to the JSON file (path: __file_path)"""
         json_objects = {}
         for key in self.__objects:
             json_objects[key] = self.__objects[key].to_dict(save_to_disk=True)
@@ -48,7 +48,7 @@ class FileStorage:
             json.dump(json_objects, f)
 
     def reload(self):
-        """deserializes the JSON file back to __objects"""
+        """deserializes the JSON file to __objects"""
         try:
             with open(self.__file_path, 'r') as f:
                 jo = json.load(f)
@@ -58,13 +58,13 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
-        """delete obj from __objects if it is inside"""
+        """delete obj from __objects if it’s inside"""
         if obj is not None:
             del self.__objects[obj.__class__.__name__ + '.' + obj.id]
             self.save()
 
     def close(self):
-        """Deserialize JSON file back to objects"""
+        """Deserialize JSON file to objects"""
         self.reload()
 
     def get(self, cls, id):
@@ -78,7 +78,7 @@ class FileStorage:
             return None
 
     def count(self, cls=None):
-        """Counts the number of objects in storage"""
+        """Count number of objects in storage"""
         total = 0
         if type(cls) == str and cls in classes:
             total = len(self.all(cls))
