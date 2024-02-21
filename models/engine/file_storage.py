@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the FileStorage class
+Has the FileStorage class
 """
 
 import json
@@ -17,7 +17,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class FileStorage:
-    """serializes instances to a JSON file & deserializes back to instances"""
+    """serializes instances to a JSON file & deserializes it back"""
 
     __file_path = "file.json"
     __objects = {}
@@ -48,7 +48,7 @@ class FileStorage:
             json.dump(json_objects, f)
 
     def reload(self):
-        """deserializes the JSON file to __objects"""
+        """deserializes the JSON file back to __objects"""
         try:
             with open(self.__file_path, 'r') as f:
                 jo = json.load(f)
@@ -64,7 +64,7 @@ class FileStorage:
             self.save()
 
     def close(self):
-        """Deserialize JSON file to objects"""
+        """Deserialize JSON file back to objects"""
         self.reload()
 
     def get(self, cls, id):
@@ -78,7 +78,7 @@ class FileStorage:
             return None
 
     def count(self, cls=None):
-        """Count number of objects in storage"""
+        """Counts the number of objects in storage"""
         total = 0
         if type(cls) == str and cls in classes:
             total = len(self.all(cls))
